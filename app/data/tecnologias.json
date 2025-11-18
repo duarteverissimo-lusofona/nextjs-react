@@ -1,0 +1,86 @@
+[
+  {
+    "title": "HTML",
+    "image": "html.svg",
+    "description": "Linguagem de Marcação de Hipertexto, a espinha dorsal de qualquer página web.",
+    "rating": 4
+  },
+  {
+    "title": "CSS",
+    "image": "css.svg",
+    "description": "Folhas de Estilo em Cascata, usadas para estilizar e dar layout aos documentos HTML.",
+    "rating": 4
+  },
+  {
+    "title": "Tailwind CSS",
+    "image": "tailwindcss.svg",
+    "description": "Um framework CSS 'utility-first' que permite construir designs rapidamente usando classes pré-definidas.",
+    "rating": 5
+  },
+  {
+    "title": "JavaScript",
+    "image": "javascript.svg",
+    "description": "Linguagem de programação essencial para tornar páginas web interativas.",
+    "rating": 5
+  },
+  {
+    "title": "TypeScript",
+    "image": "typescript.svg",
+    "description": "Um superset do JavaScript que adiciona tipagem estática, tornando o código mais seguro e escalável.",
+    "rating": 5
+  },
+  {
+    "title": "JSON",
+    "image": "json.svg",
+    "description": "Formato de texto simples para troca de dados entre sistemas, com base na sintaxe de objetos JavaScript.",
+    "rating": 3
+  },
+  {
+    "title": "API RESTful",
+    "description": "Um conjunto de regras para estruturar APIs que usam requisições HTTP para acessar e manipular dados.",
+    "image": "restapi.svg",
+    "rating": 4
+  },
+  {
+    "title": "Swagger",
+    "image": "swagger.svg",
+    "description": "Ferramenta para projetar, construir, documentar e consumir serviços RESTful.",
+    "rating": 3
+  },
+  {
+    "title": "GitHub",
+    "image": "github.svg",
+    "description": "Plataforma de hospedagem de código para controle de versão usando Git.",
+    "rating": 5
+  },
+  {
+    "title": "Codespaces",
+    "image": "codespaces.svg",
+    "description": "Ambiente de desenvolvimento instantâneo e baseado em nuvem fornecido pelo GitHub.",
+    "rating": 4
+  },
+  {
+    "title": "GitHub Pages",
+    "image": "githubpages.svg",
+    "description": "Serviço de hospedagem estática gratuita, integrado ao GitHub, para projetos web.",
+    "rating": 3
+  },
+  {
+    "title": "React.js",
+    "image": "react.svg",
+    "description": "Biblioteca JavaScript para construção de interfaces de usuário baseadas em componentes.",
+    "rating": 5
+  },
+  {
+    "title": "Next.js",
+    "image": "nextjs.svg",
+    "description": "Framework React full-stack para criar aplicações web modernas com renderização no lado do servidor (SSR).",
+    "rating": 5
+  },
+  {
+    "title": "Vercel",
+    "image": "vercel.svg",
+    "description": "Plataforma em nuvem para frontend developers, otimizada para Next.js e hospedagem de sites estáticos.",
+    "rating": 4
+  }
+]
