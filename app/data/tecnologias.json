@@ -1,7 +1,7 @@
 [
   {
     "title": "HTML",
-    "image": "html.svg",
+    "image": "html5.svg",
     "description": "Linguagem de Marcação de Hipertexto, a espinha dorsal de qualquer página web.",
     "rating": 4
   },
@@ -36,12 +36,6 @@
     "rating": 3
   },
   {
-    "title": "API RESTful",
-    "description": "Um conjunto de regras para estruturar APIs que usam requisições HTTP para acessar e manipular dados.",
-    "image": "restapi.svg",
-    "rating": 4
-  },
-  {
     "title": "Swagger",
     "image": "swagger.svg",
     "description": "Ferramenta para projetar, construir, documentar e consumir serviços RESTful.",
@@ -54,18 +48,6 @@
     "rating": 5
   },
   {
-    "title": "Codespaces",
-    "image": "codespaces.svg",
-    "description": "Ambiente de desenvolvimento instantâneo e baseado em nuvem fornecido pelo GitHub.",
-    "rating": 4
-  },
-  {
-    "title": "GitHub Pages",
-    "image": "githubpages.svg",
-    "description": "Serviço de hospedagem estática gratuita, integrado ao GitHub, para projetos web.",
-    "rating": 3
-  },
-  {
     "title": "React.js",
     "image": "react.svg",
     "description": "Biblioteca JavaScript para construção de interfaces de usuário baseadas em componentes.",
@@ -73,7 +55,7 @@
   },
   {
     "title": "Next.js",
-    "image": "nextjs.svg",
+    "image": "nextdotjs.svg",
     "description": "Framework React full-stack para criar aplicações web modernas com renderização no lado do servidor (SSR).",
     "rating": 5
   },
