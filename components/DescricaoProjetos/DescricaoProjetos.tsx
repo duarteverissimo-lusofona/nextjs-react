@@ -24,17 +24,17 @@ export default function DescricaoProjetos() {
         
         <Projeto 
           nome="Loja Online"
-          url="https://duarteverissimo-lusofona.github.io/loja/"
+          url="https://duarteverissimo-lusofona.github.io/lab7/index.html"
         />
         
         <Projeto 
           nome="Site com JavaScript Interativo"
-          url="https://duarteverissimo-lusofona.github.io/js-interativo/"
+          url="https://duarteverissimo-lusofona.github.io/lab5/index.html"
         />
         
         <Projeto 
           nome="Portfolio Pessoal"
-          url="https://duarteverissimo-lusofona.github.io/portfolio/"
+          url="https://duarte-verissimo.github.io/"
         />
       </div>
     </div>
