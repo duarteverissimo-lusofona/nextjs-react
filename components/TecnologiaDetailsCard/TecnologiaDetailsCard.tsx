@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+import ContadorPersonalizado from '../ContadorPersonalizado/ContadorPersonalizado';
+
 interface TecnologiaDetailsCardProps {
   title: string;
   image: string;
@@ -28,21 +30,24 @@ export default function TecnologiaDetailsCard({
   };
 
   return (
-    <div className="max-w-2xl mx-auto bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl shadow-2xl p-8 border-2 border-blue-200">
+    <div className="max-w-2xl mx-auto bg-linear-to-br from-blue-50 to-blue-100 rounded-2xl shadow-2xl p-8 border-2 border-blue-200">
       {/* Header com imagem e título */}
-      <div className="flex items-center justify-center mb-6 pb-6 border-b-2 border-blue-200">
-        <div className="mr-6">
-          <Image
-            src={`/tecnologias/${image}`}
-            alt={`${title} Logo`}
-            width={100}
-            height={100}
-            className="object-contain"
-          />
+      <div className="flex flex-col items-center justify-center mb-6 pb-6 border-b-2 border-blue-200">
+        <div className="flex items-center justify-center mb-4">
+          <div className="mr-6">
+            <Image
+              src={`/tecnologias/${image}`}
+              alt={`${title} Logo`}
+              width={100}
+              height={100}
+              className="object-contain"
+            />
+          </div>
+          <h2 className="text-4xl font-bold text-gray-800">
+            {title}
+          </h2>
         </div>
-        <h2 className="text-4xl font-bold text-gray-800">
-          {title}
-        </h2>
+        <ContadorPersonalizado title={title} />
       </div>
 
       {/* Descrição */}

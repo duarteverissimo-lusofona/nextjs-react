@@ -32,7 +32,7 @@ export default function SobrePage() {
         <h3 className="text-xl font-semibold text-gray-800 mb-3">
           Principais Características
         </h3>
-        <ul className="space-y-3">
+        <ul className="space-y-3 list-none">
           <li className="border-l-4 border-blue-500 pl-4 py-2">
             <strong className="text-gray-800">Componentes Reutilizáveis:</strong>
             <span className="text-gray-700"> Código modular que pode ser usado em diferentes partes da aplicação.</span>

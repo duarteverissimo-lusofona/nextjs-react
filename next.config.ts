@@ -1,7 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'deisishop.pythonanywhere.com',
+        port: '',
+        pathname: '/media/produto_imagens/**',
+      },
+    ],
+  },
 };
 
 export default nextConfig;

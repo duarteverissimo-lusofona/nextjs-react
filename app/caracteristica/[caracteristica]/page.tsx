@@ -57,7 +57,7 @@ export default async function CaracteristicaPage({ params }: CaracteristicaPageP
 
       {/* Característica centralizada usando Tailwind e Flex */}
       <div className="flex items-center justify-center min-h-[50vh]">
-        <div className="max-w-2xl w-full bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl shadow-2xl p-12 border-2 border-blue-200">
+        <div className="max-w-2xl w-full bg-linear-to-br from-blue-50 to-blue-100 rounded-2xl shadow-2xl p-12 border-2 border-blue-200">
           <div className="text-center">
             <div className="mb-6">
               <span className="inline-block bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-full">
