@@ -45,7 +45,7 @@ return (
           </nav>
         </header>
         
-        <main className="bg-blue-200 p-5 rounded-2xl max-w-[var(--container-2xl)] min-h-[70vh]">
+        <main className="p-5 rounded-2xl">
           {children}
         </main>
         

@@ -1,62 +1,48 @@
-"use client";
+'use client'
 
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import Link from 'next/link'
+import useSWR from 'swr'
+import { Spinner } from '@/components/ui/spinner' 
+
+
+// Interface para a categoria
+interface Categoria {
+  name: string
+}
+
+// Ícones para cada categoria da DEISI Shop
+const categoryIcons: { [key: string]: string } = {
+  "T-shirts": "👕",
+  "Canecas": "☕",
+  "Meias": "🧦"
+}
 
 export default function CategoriasPage() {
-  const [categories, setCategories] = useState<string[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetch('https://deisishop.pythonanywhere.com/categories')
-      .then((res) => res.json())
-      .then((data) => {
-        setCategories(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error('Error fetching categories:', error);
-        setLoading(false);
-      });
-  }, []);
-
-  const getCategoryIcon = (category: string) => {
-    switch (category.toLowerCase()) {
-      case 't-shirts': return '👕';
-      case 'canecas': return '☕';
-      case 'meias': return '🧦';
-      default: return '📦';
-    }
-  };
-
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center min-h-[50vh]">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
-      </div>
-    );
-  }
-
+  const fetcher = (url: string) => fetch(url).then(res => res.json())
+  const { data, error, isLoading } = useSWR<Categoria[]>('/api/categorias', fetcher)
+  
+  if (isLoading) return <Spinner />
+  if (error) return <p className="text-red-500">Erro ao carregar categorias</p>
+  
   return (
-    <div className="p-4 sm:p-8">
-      <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
-        Categorias
-      </h2>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-        {categories.map((category) => (
-          <Link href={`/categorias/${category}`} key={category} className="group">
-            <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-8 flex flex-col items-center justify-center border border-gray-100 h-48">
-              <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                {getCategoryIcon(category)}
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors capitalize">
-                {category}
-              </h3>
+    <div className="p-4">
+      <h1 className="text-4xl font-bold text-gray-800 mb-8">Categorias</h1>
+      
+      <div className="grid grid-cols-4 gap-4">
+        {data?.map((categoria) => (
+          <Link 
+            key={categoria.name} 
+            href={`/categorias/${encodeURIComponent(categoria.name)}`}
+          >
+            <div className="border p-6 rounded-lg text-center hover:bg-gray-100 cursor-pointer transition">
+              <span className="text-6xl block mb-4">
+                {categoryIcons[categoria.name]}
+              </span>
+              <h2 className="font-bold text-lg capitalize">{categoria.name}</h2>
             </div>
           </Link>
         ))}
       </div>
     </div>
-  );
+  )
 }
